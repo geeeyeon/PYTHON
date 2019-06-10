@@ -1,0 +1,22 @@
+##랜덤숫자 정렬하기
+import random
+
+data=[]
+i,k=0,0
+
+for i in range(0,10):
+    tmp = hex(random.randrange(0,10000))
+    data.append(tmp)
+print('정렬 전: ',end='  ')
+[print(num, end=' ')for num in data]
+
+for i in range(0, len(data)-1):
+    for k in range(i+1, len(data)):
+        if int(data[i],16)>int(data[k],16):
+            tmp=data[i]
+            data[i]=data[k]
+            data[k]=tmp
+print('\n정렬 후: ',end='  ')
+[print(num, end='  ')for num in data]
+   
+              
